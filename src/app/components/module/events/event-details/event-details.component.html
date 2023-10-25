@@ -1,0 +1,50 @@
+<!-- frontoffice.component.html -->
+<div class="container mt-5">
+  <br>
+  <br>
+  <br>
+  <h4 class="font-weight-bold text-center mb-4 mt-4">Event Details</h4>
+
+  <div class="row">
+      <div class="col-md-6">
+          <div class="card mx-auto mt-4" style="max-width: 400px;">
+              <div class="card-header bg-orange text-white">
+                  <h5 class="card-title text-center">Event Title</h5>
+              </div>
+              <div class="card-body">
+                  <ul class="list-group list-group-flush">
+                      <li class="list-group-item"><strong>Event Type:</strong> Event Type</li>
+                      <li class="list-group-item"><strong>Description:</strong> Event Description</li>
+                      <li class="list-group-item"><strong>Organizer:</strong> Organizer Name</li>
+                      <li class="list-group-item"><strong>Event Date and Time:</strong> Event Date and Time</li>
+                      <li class="list-group-item"><strong>Reservation Deadline:</strong> Reservation Deadline</li>
+                      <li class="list-group-item">
+                          <img id="eventImage" class="w-48 mr-6 mb-6" src="path/to/image.jpg" alt="Event Image">
+                      </li>
+                  </ul>
+              </div>
+              <div class="text-center mt-3">
+                  <a routerLink="/module/Events/list" class="custom-btn">Back to Events</a>
+              </div>
+          </div>
+      </div>
+      <div class="col-md-6">
+          <div class="widget widget-user">
+              <h3 class="title-wd">Users who made reservations:</h3>
+              <ul>
+                  <li>
+                      <div class="usr-msg-details">
+                          <div class="usr-ms-img">
+                              <img src="images/resources/m-img1.png" alt="User Image">
+                          </div>
+                          <div class="usr-mg-info">
+                              <h3>User Name</h3>
+                              <p>Username</p>
+                          </div>
+                      </div>
+                      <span>Reservation Date: Reservation Date</span>
+                  </li>
+              </ul>
+          </div>
+      </div>
+  </div>

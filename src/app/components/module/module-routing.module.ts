@@ -7,15 +7,19 @@ import {AnnouncmentComponent} from "./Announcments/announcment/announcment.compo
 import {AnnouncmentFormComponent} from "./Announcments/announcment-form/announcment-form.component";
 
 const routes: Routes = [
+
   { path: '',
-    component: ModuleComponent,
-    children: [
-        { path: '', component: AnnouncmentsListComponent },
-        { path: 'announcements', component: AnnouncmentsViewlistComponent },
+      component: ModuleComponent,
+      children: [
+          { path: '', component: AnnouncmentsListComponent },
+          { path: 'Events', loadChildren: () => import('./events/events.module').then(m => m.EventsModule) }
+
+          { path: 'announcements', component: AnnouncmentsViewlistComponent },
         { path: 'announcement/:id', component: AnnouncmentComponent },
         { path: 'announcements/create', component: AnnouncmentFormComponent },
     ],
-  }
+    }
+
 ];
 
 @NgModule({
