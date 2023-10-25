@@ -8,6 +8,8 @@ const routes: Routes = [
     component: ModuleComponent,
     children: [
         { path: '', component: AnnouncmentsListComponent },
+        { path: 'blog', loadChildren: () => import('./blog/blog.module').then(m => m.BlogModule) }
+
     ],
   }
 ];
