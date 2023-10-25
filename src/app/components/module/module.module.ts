@@ -14,6 +14,7 @@ import { AnnouncmentsListComponent } from './Announcments/announcments-list/anno
 import { AnnouncmentsViewlistComponent } from './Announcments/announcments-viewlist/announcments-viewlist.component';
 import { AnnouncmentComponent } from './Announcments/announcment/announcment.component';
 import { AnnouncmentFormComponent } from './Announcments/announcment-form/announcment-form.component';
+import {FormsModule} from "@angular/forms";
 
 
 @NgModule({
@@ -33,7 +34,8 @@ import { AnnouncmentFormComponent } from './Announcments/announcment-form/announ
   ],
   imports: [
     CommonModule,
-    ModuleRoutingModule
+    ModuleRoutingModule,
+    FormsModule
   ]
 })
 export class ModuleModule { }
