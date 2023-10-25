@@ -10,6 +10,7 @@ import { JobsComponent } from './jobs/jobs.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { FooterComponent } from './shared/footer/footer.component';
 import { HeaderComponent } from './shared/header/header.component';
+import { AnnouncmentsListComponent } from './Announcments/announcments-list/announcments-list.component';
 
 
 @NgModule({
@@ -22,6 +23,7 @@ import { HeaderComponent } from './shared/header/header.component';
     ProjectsComponent,
     HeaderComponent,
     FooterComponent,
+    AnnouncmentsListComponent,
   ],
   imports: [
     CommonModule,
