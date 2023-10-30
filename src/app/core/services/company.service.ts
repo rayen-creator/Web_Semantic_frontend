@@ -9,6 +9,6 @@ export class CompanyService {
   constructor(private httpclient:HttpClient) { }
 
   getCompanies(){
-    return this.httpclient.get(this.url+'/getCompanies');
+    return this.httpclient.get(this.url+'/getcompany');
   }
 }
