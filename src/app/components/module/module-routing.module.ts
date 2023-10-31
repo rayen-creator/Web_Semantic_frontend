@@ -17,7 +17,7 @@ const routes: Routes = [
     children: [
       { path: '', component: AnnouncmentsListComponent },
       { path: 'companies', component: CompaniesComponent },
-      { path: 'company/:id', component: CompaniesDetailComponent },
+      { path: 'company/:Name_Company', component: CompaniesDetailComponent },
       { path: 'jobs', component: JobsComponent },
       { path: 'Events', loadChildren: () => import('./events/events.module').then(m => m.EventsModule) },
       { path: 'announcements', component: AnnouncmentsViewlistComponent },

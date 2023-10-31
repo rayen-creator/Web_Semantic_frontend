@@ -14,7 +14,6 @@ export class CompaniesComponent implements OnInit {
   ngOnInit(): void {
     this.companyService.getCompanies().subscribe((data: any) => {
 
-      // Flatten the JSON objects and store them in an array
       this.companies = data.map((item: any) => {
         const key = Object.keys(item)[0];
         return { ...item[key], id: key };

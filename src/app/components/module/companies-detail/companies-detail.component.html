@@ -4,7 +4,7 @@
  
 
     <section class="cover-sec">
-        <img src="images/resources/company-cover.jpg" alt="">
+        <img src="/assets/images/resources/company-cover.jpg" alt="">
     </section><!--cover-sec end-->
 
 
@@ -17,22 +17,9 @@
                             <div class="main-left-sidebar">
                                 <div class="user_profile">
                                     <div class="user-pro-img">
-                                        <img src="images/resources/company-profile.png" alt="">
+                                        <img src="/assets/images/resources/company-profile.png" alt="">
                                     </div><!--user-pro-img end-->
-                                    <div class="user_pro_status">
-                                      
-                                        <ul class="flw-status">
-                                            <li>
-                                                <span>Following</span>
-                                                <b>34</b>
-                                            </li>
-                                            <li>
-                                                <span>Followers</span>
-                                                <b>155</b>
-                                            </li>
-                                        </ul>
-                                    </div><!--user_pro_status end-->
-                              
+                                    
                                 </div><!--user_profile end-->
                                 <div class="suggestions full-width">
                                     <div class="sd-title">
@@ -41,7 +28,7 @@
                                     </div><!--sd-title end-->
                                     <div class="suggestions-list">
                                         <div class="suggestion-usd">
-                                            <img src="images/resources/s1.png" alt="">
+                                            <img src="/assets/images/resources/s1.png" alt="">
                                             <div class="sgt-text">
                                                 <h4>Jessica William</h4>
                                                 <span>Graphic Designer</span>
@@ -49,7 +36,7 @@
                                             <span><i class="la la-plus"></i></span>
                                         </div>
                                         <div class="suggestion-usd">
-                                            <img src="images/resources/s2.png" alt="">
+                                            <img src="/assets/images/resources/s2.png" alt="">
                                             <div class="sgt-text">
                                                 <h4>John Doe</h4>
                                                 <span>PHP Developer</span>
@@ -57,7 +44,7 @@
                                             <span><i class="la la-plus"></i></span>
                                         </div>
                                         <div class="suggestion-usd">
-                                            <img src="images/resources/s3.png" alt="">
+                                            <img src="/assets/images/resources/s3.png" alt="">
                                             <div class="sgt-text">
                                                 <h4>Poonam</h4>
                                                 <span>Wordpress Developer</span>
@@ -65,7 +52,7 @@
                                             <span><i class="la la-plus"></i></span>
                                         </div>
                                         <div class="suggestion-usd">
-                                            <img src="images/resources/s4.png" alt="">
+                                            <img src="/assets/images/resources/s4.png" alt="">
                                             <div class="sgt-text">
                                                 <h4>Bill Gates</h4>
                                                 <span>C & C++ Developer</span>
@@ -73,7 +60,7 @@
                                             <span><i class="la la-plus"></i></span>
                                         </div>
                                         <div class="suggestion-usd">
-                                            <img src="images/resources/s5.png" alt="">
+                                            <img src="/assets/images/resources/s5.png" alt="">
                                             <div class="sgt-text">
                                                 <h4>Jessica William</h4>
                                                 <span>Graphic Designer</span>
@@ -81,7 +68,7 @@
                                             <span><i class="la la-plus"></i></span>
                                         </div>
                                         <div class="suggestion-usd">
-                                            <img src="images/resources/s6.png" alt="">
+                                            <img src="/assets/images/resources/s6.png" alt="">
                                             <div class="sgt-text">
                                                 <h4>John Doe</h4>
                                                 <span>PHP Developer</span>
@@ -98,9 +85,9 @@
                         <div class="col-lg-6">
                             <div class="main-ws-sec">
                                 <div class="user-tab-sec">
-                                    <h3>Facebook Inc.</h3>
+                                    <h3>{{company[0].Name_Company}}</h3>
                                     <div class="star-descp">
-                                        <span>Established Since 2009</span>
+                                        <span>Established {{company[0].Founding_Date.toString().split("^")[0]}}</span>
                                         <ul>
                                             <li><i class="fa fa-star"></i></li>
                                             <li><i class="fa fa-star"></i></li>
@@ -112,102 +99,25 @@
                                     <div class="tab-feed">
                                         <ul>
                                             <li data-tab="feed-dd" class="active">
+                                                <a href="#" title="" class="py-1">
+                                                    <img src="/assets/images/ic1.png" alt="">
+                                                    <span>{{company[0].Location_Company}}</span>
+                                                </a>
                                                 <a href="#" title="">
-                                                    <img src="images/ic1.png" alt="">
-                                                    <span>Feed</span>
+                                                    <img src="/assets/images/ic2.png" alt="">
+                                                    <span>{{company[0].Services}}</span>
                                                 </a>
                                             </li>
                                             <li data-tab="info-dd">
-                                                <a href="#" title="">
-                                                    <img src="images/ic2.png" alt="">
-                                                    <span>Info</span>
-                                                </a>
+                                               
                                             </li>
                                         
                                         </ul>
                                     </div><!-- tab-feed end-->
-                                </div><!--user-tab-sec end-->
-                                <div class="product-feed-tab current" id="feed-dd">
-                                    <div class="posts-section">
-                                        <div class="post-bar">
-                                            <div class="post_topbar">
-                                                <div class="usy-dt">
-                                                    <img src="images/resources/company-pic.png" alt="">
-                                                    <div class="usy-name">
-                                                        <h3>Facebook Inc.</h3>
-                                                        <span><img src="images/clock.png" alt="">3 min ago</span>
-                                                    </div>
-                                                </div>
-                                                <div class="ed-opts">
-                                                    <a href="#" title="" class="ed-opts-open"><i class="la la-ellipsis-v"></i></a>
-                                                    <ul class="ed-options">
-                                                        <li><a href="#" title="">Edit Post</a></li>
-                                                        <li><a href="#" title="">Unsaved</a></li>
-                                                        <li><a href="#" title="">Unbid</a></li>
-                                                        <li><a href="#" title="">Close</a></li>
-                                                        <li><a href="#" title="">Hide</a></li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                            <div class="epi-sec">
-                                                <ul class="descp">
-                                                    <li><img src="images/icon8.png" alt=""><span>Epic Coder</span></li>
-                                                    <li><img src="images/icon9.png" alt=""><span>India</span></li>
-                                                </ul>
-                                                <ul class="bk-links">
-                                                    <li><a href="#" title=""><i class="la la-bookmark"></i></a></li>
-                                                    <li><a href="#" title=""><i class="la la-envelope"></i></a></li>
-                                                </ul>
-                                            </div>
-                                            <div class="job_descp">
-                                                <h3>Senior PHP Developer</h3>
-                                                <ul class="job-dt">
-                                                    <li><a href="#" title="">Full Time</a></li>
-                                                    <li><span>$30 / hr</span></li>
-                                                </ul>
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam luctus hendrerit metus, ut ullamcorper quam finibus at. Etiam id magna sit amet... <a href="#" title="">view more</a></p>
-                                                <ul class="skill-tags">
-                                                    <li><a href="#" title="">HTML</a></li>
-                                                    <li><a href="#" title="">PHP</a></li>
-                                                    <li><a href="#" title="">CSS</a></li>
-                                                    <li><a href="#" title="">Javascript</a></li>
-                                                    <li><a href="#" title="">Wordpress</a></li> 	
-                                                </ul>
-                                            </div>
-                                            <div class="job-status-bar">
-                                                <ul class="like-com">
-                                                    <li>
-                                                        <a href="#" class="active"><i class="fas fa-heart"></i> Like</a>
-                                                        <img src="images/liked-img.png" alt="">
-                                                        <span>25</span>
-                                                    </li>
-                                                    <li><a href="#" class="com"><i class="fas fa-comment-alt"></i> Comments 15</a></li>
-                                                </ul>
-                                                <a href="#"><i class="fas fa-eye"></i>Views 50</a>
-                                            </div>
-                                        </div><!--post-bar end-->
-                                    </div><!--posts-section end-->
-                                </div><!--product-feed-tab end-->
-                                <div class="product-feed-tab" id="info-dd">
-                                    <div class="user-profile-ov">
-                                        <h3><a href="#" title="" class="overview-open">Overview</a> <a href="#" title="" class="overview-open"><i class="fa fa-pencil"></i></a></h3>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque tempor aliquam felis, nec condimentum ipsum commodo id. Vivamus sit amet augue nec urna efficitur tincidunt. Vivamus consectetur aliquam lectus commodo viverra. Nunc eu augue nec arcu efficitur faucibus. Aliquam accumsan ac magna convallis bibendum. Quisque laoreet augue eget augue fermentum scelerisque. Vivamus dignissim mollis est dictum blandit. Nam porta auctor neque sed congue. Nullam rutrum eget ex at maximus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eget vestibulum lorem.</p>
-                                    </div><!--user-profile-ov end-->
-                                    <div class="user-profile-ov st2">
-                                        <h3><a href="#" title="" class="esp-bx-open">Establish Since </a><a href="#" title="" class="esp-bx-open"><i class="fa fa-pencil"></i></a> <a href="#" title="" class="esp-bx-open"><i class="fa fa-plus-square"></i></a></h3>
-                                        <span>February 2004</span>
-                                    </div><!--user-profile-ov end-->
-                                    <div class="user-profile-ov">
-                                        <h3><a href="#" title="" class="emp-open">Total Employees</a> <a href="#" title="" class="emp-open"><i class="fa fa-pencil"></i></a> <a href="#" title="" class="emp-open"><i class="fa fa-plus-square"></i></a></h3>
-                                        <span>17,048</span>
-                                    </div><!--user-profile-ov end-->
-                                    <div class="user-profile-ov">
-                                        <h3><a href="#" title="" class="lct-box-open">Location</a> <a href="#" title="" class="lct-box-open"><i class="fa fa-pencil"></i></a> <a href="#" title="" class="lct-box-open"><i class="fa fa-plus-square"></i></a></h3>
-                                        <h4>USA</h4>
-                                        <p> Menlo Park, California, United States</p>
-                                    </div><!--user-profile-ov end-->
-                                </div><!--product-feed-tab end-->
-                              
+                                </div>
+                                <!-- feed -->
+                               <app-job [company_name]="company[0].Name_Company"></app-job>
+                       
                             </div><!--main-ws-sec end-->
                         </div>
                         <div class="col-lg-3">
@@ -239,8 +149,8 @@
                     <li><a href="#" title="">Language</a></li>
                     <li><a href="#" title="">Copyright Policy</a></li>
                 </ul>
-                <p><img src="images/copy-icon2.png" alt="">Copyright 2018</p>
-                <img class="fl-rgt" src="images/logo2.png" alt="">
+                <p><img src="/assets/images/copy-icon2.png" alt="">Copyright 2018</p>
+                <img class="fl-rgt" src="/assets/images/logo2.png" alt="">
             </div>
         </div>
     </footer><!--footer end-->

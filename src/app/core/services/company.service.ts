@@ -11,4 +11,8 @@ export class CompanyService {
   getCompanies(){
     return this.httpclient.get(this.url+'/getcompany');
   }
+
+  getCompanybyname(Name_Company:any){
+    return this.httpclient.get(`${this.url}/getcompanybyname/${Name_Company}`);
+  }
 }

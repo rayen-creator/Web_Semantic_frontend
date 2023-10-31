@@ -9,6 +9,10 @@ export class JobService {
   constructor(private httpclient:HttpClient) { }
 
   getJobs(){
-    return this.httpclient.get(this.url+'/getJobs');
+    return this.httpclient.get(this.url+'/getJob');
+  }
+
+  getJobBycompany(Name_Company:any){
+    return this.httpclient.get(`${this.url}/getJobBycompany/${Name_Company}`);
   }
 }

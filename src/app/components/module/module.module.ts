@@ -16,6 +16,7 @@ import { AnnouncmentComponent } from './Announcments/announcment/announcment.com
 import { AnnouncmentFormComponent } from './Announcments/announcment-form/announcment-form.component';
 import {FormsModule} from "@angular/forms";
 import { CompaniesDetailComponent } from './companies-detail/companies-detail.component';
+import { JobComponent } from './companies-detail/job/job.component';
 
 
 @NgModule({
@@ -33,6 +34,7 @@ import { CompaniesDetailComponent } from './companies-detail/companies-detail.co
     AnnouncmentComponent,
     AnnouncmentFormComponent,
     CompaniesDetailComponent,
+    JobComponent,
   ],
   imports: [
     CommonModule,
