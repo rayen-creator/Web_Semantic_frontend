@@ -11,6 +11,10 @@ import { ProjectsComponent } from './projects/projects.component';
 import { FooterComponent } from './shared/footer/footer.component';
 import { HeaderComponent } from './shared/header/header.component';
 import { AnnouncmentsListComponent } from './Announcments/announcments-list/announcments-list.component';
+import { AnnouncmentsViewlistComponent } from './Announcments/announcments-viewlist/announcments-viewlist.component';
+import { AnnouncmentComponent } from './Announcments/announcment/announcment.component';
+import { AnnouncmentFormComponent } from './Announcments/announcment-form/announcment-form.component';
+import {FormsModule} from "@angular/forms";
 
 
 @NgModule({
@@ -24,10 +28,14 @@ import { AnnouncmentsListComponent } from './Announcments/announcments-list/anno
     HeaderComponent,
     FooterComponent,
     AnnouncmentsListComponent,
+    AnnouncmentsViewlistComponent,
+    AnnouncmentComponent,
+    AnnouncmentFormComponent,
   ],
   imports: [
     CommonModule,
-    ModuleRoutingModule
+    ModuleRoutingModule,
+    FormsModule
   ]
 })
 export class ModuleModule { }

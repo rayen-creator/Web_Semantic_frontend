@@ -1,17 +1,27 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { ModuleComponent } from './module.component';
-import {AnnouncmentsListComponent} from "./Announcments/announcments-list/announcments-list.component";
+import { AnnouncmentFormComponent } from "./Announcments/announcment-form/announcment-form.component";
+import { AnnouncmentsListComponent } from './Announcments/announcments-list/announcments-list.component';
+import { AnnouncmentsViewlistComponent } from './Announcments/announcments-viewlist/announcments-viewlist.component';
+import { AnnouncmentComponent } from './Announcments/announcment/announcment.component';
 
 const routes: Routes = [
-  { path: '',
+
+  {
+    path: '',
     component: ModuleComponent,
     children: [
-        { path: '', component: AnnouncmentsListComponent },
-        { path: 'blog', loadChildren: () => import('./blog/blog.module').then(m => m.BlogModule) }
+      { path: '', component: AnnouncmentsListComponent },
+      { path: 'Events', loadChildren: () => import('./events/events.module').then(m => m.EventsModule) },
+      { path: 'announcements', component: AnnouncmentsViewlistComponent },
+      { path: 'announcement/:id', component: AnnouncmentComponent },
+      { path: 'announcements/create', component: AnnouncmentFormComponent },
+      { path: 'blog', loadChildren: () => import('./blog/blog.module').then(m => m.BlogModule) }
 
     ],
   }
+
 ];
 
 @NgModule({
