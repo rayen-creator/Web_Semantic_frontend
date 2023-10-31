@@ -122,13 +122,13 @@
                 </div><!--post-st end-->
               </div><!--post-topbar end-->
               <div class="posts-section">
-                <div class="post-bar">
+                <div *ngFor="let announcement of announcements" class="post-bar">
                   <div class="post_topbar" style="margin-bottom: 20px;">
                     <div class="usy-dt">
                       <img src="assets/images/wd-logo.png" alt="" style="height: 50px; width: 50px;">
                       <div class="usy-name">
                         <h3>WorkWise</h3>
-                        <span><img src="assets/images/clock.png" alt="">3 min ago</span>
+                        <span><img src="assets/images/clock.png" alt="">3 min ago</span> <!-- Assuming Ann_Posted_Time is not provided -->
                       </div>
                     </div>
                     <div class="ed-opts">
@@ -143,215 +143,20 @@
                     </div>
                   </div>
                   <div class="job_descp">
-                    <h3>New Feature Announcement:</h3>
+                    <h3>{{announcement.Ann_Title}}</h3>
                     <div class="job_descp" style="margin-bottom: 10px;">
-                      <img src="assets/images/resources/announcement.jpeg" alt="Image Description">
+                      <img src="{{announcement.Ann_Image_Url}}" alt="Image Description">
                     </div>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam luctus hendrerit metus, ut ullamcorper quam finibus at. Etiam id magna sit amet... <a href="#" title="">view more</a></p>
+                    <p>{{announcement.Ann_Description}} <a [routerLink]="['announcement', getAnnouncementId(announcement.id)]" title="">View More</a></p>
                   </div>
                   <ul class="skill-tags">
-                    <li><a href="#" title="">Important</a></li>
-                    <li><a href="#" title="">Announcement</a></li>
-                    <li><a href="#" title="">New Feature</a></li>
+                    <li *ngFor="let tag of announcement.Announcement_has_tags">
+                      <a href="#" title="">{{tag}}</a>
+                    </li>
                   </ul>
-                </div><!--post-bar end-->
-                <div class="top-profiles">
-                  <div class="pf-hd">
-                    <h3>Top Profiles</h3>
-                    <i class="la la-ellipsis-v"></i>
-                  </div>
-                  <div class="profiles-slider slick-initialized slick-slider"><span class="slick-previous slick-arrow" style="display: inline;"></span>
-                    <!--user-profy end-->
-                    <!--user-profy end-->
-                    <!--user-profy end-->
-                    <!--user-profy end-->
-                    <!--user-profy end-->
-                    <!--user-profy end-->
-                    <div class="slick-list draggable"><div class="slick-track" style="opacity: 1; width: 2926px; transform: translate3d(-1254px, 0px, 0px);"><div class="user-profy slick-slide slick-cloned" tabindex="-1" style="width: 201px;" data-slick-index="-2" aria-hidden="true">
-                      <img src="assets/images/resources/user2.png" alt="">
-                      <h3>John Doe</h3>
-                      <span>Graphic Designer</span>
-                      <ul>
-                        <li><a href="#" title="" class="followw" tabindex="-1">Follow</a></li>
-                        <li><a href="#" title="" class="envlp" tabindex="-1"><img src="assets/images/envelop.png" alt=""></a></li>
-                        <li><a href="#" title="" class="hire" tabindex="-1">hire</a></li>
-                      </ul>
-                      <a href="#" title="" tabindex="-1">View Profile</a>
-                    </div><div class="user-profy slick-slide slick-cloned" tabindex="-1" style="width: 201px;" data-slick-index="-1" aria-hidden="true">
-                      <img src="assets/images/resources/user3.png" alt="">
-                      <h3>John Doe</h3>
-                      <span>Graphic Designer</span>
-                      <ul>
-                        <li><a href="#" title="" class="followw" tabindex="-1">Follow</a></li>
-                        <li><a href="#" title="" class="envlp" tabindex="-1"><img src="assets/images/envelop.png" alt=""></a></li>
-                        <li><a href="#" title="" class="hire" tabindex="-1">hire</a></li>
-                      </ul>
-                      <a href="#" title="" tabindex="-1">View Profile</a>
-                    </div><div class="user-profy slick-slide" tabindex="-1" style="width: 201px;" data-slick-index="0" aria-hidden="true">
-                      <img src="assets/images/resources/user1.png" alt="">
-                      <h3>John Doe</h3>
-                      <span>Graphic Designer</span>
-                      <ul>
-                        <li><a href="#" title="" class="followw" tabindex="-1">Follow</a></li>
-                        <li><a href="#" title="" class="envlp" tabindex="-1"><img src="assets/images/envelop.png" alt=""></a></li>
-                        <li><a href="#" title="" class="hire" tabindex="-1">hire</a></li>
-                      </ul>
-                      <a href="#" title="" tabindex="-1">View Profile</a>
-                    </div><div class="user-profy slick-slide" tabindex="-1" style="width: 201px;" data-slick-index="1" aria-hidden="true">
-                      <img src="assets/images/resources/user2.png" alt="">
-                      <h3>John Doe</h3>
-                      <span>Graphic Designer</span>
-                      <ul>
-                        <li><a href="#" title="" class="followw" tabindex="-1">Follow</a></li>
-                        <li><a href="#" title="" class="envlp" tabindex="-1"><img src="assets/images/envelop.png" alt=""></a></li>
-                        <li><a href="#" title="" class="hire" tabindex="-1">hire</a></li>
-                      </ul>
-                      <a href="#" title="" tabindex="-1">View Profile</a>
-                    </div><div class="user-profy slick-slide" tabindex="-1" style="width: 201px;" data-slick-index="2" aria-hidden="true">
-                      <img src="assets/images/resources/user3.png" alt="">
-                      <h3>John Doe</h3>
-                      <span>Graphic Designer</span>
-                      <ul>
-                        <li><a href="#" title="" class="followw" tabindex="-1">Follow</a></li>
-                        <li><a href="#" title="" class="envlp" tabindex="-1"><img src="assets/images/envelop.png" alt=""></a></li>
-                        <li><a href="#" title="" class="hire" tabindex="-1">hire</a></li>
-                      </ul>
-                      <a href="#" title="" tabindex="-1">View Profile</a>
-                    </div><div class="user-profy slick-slide" tabindex="-1" style="width: 201px;" data-slick-index="3" aria-hidden="true">
-                      <img src="assets/images/resources/user1.png" alt="">
-                      <h3>John Doe</h3>
-                      <span>Graphic Designer</span>
-                      <ul>
-                        <li><a href="#" title="" class="followw" tabindex="-1">Follow</a></li>
-                        <li><a href="#" title="" class="envlp" tabindex="-1"><img src="assets/images/envelop.png" alt=""></a></li>
-                        <li><a href="#" title="" class="hire" tabindex="-1">hire</a></li>
-                      </ul>
-                      <a href="#" title="" tabindex="-1">View Profile</a>
-                    </div><div class="user-profy slick-slide slick-current slick-active" tabindex="0" style="width: 201px;" data-slick-index="4" aria-hidden="false">
-                      <img src="assets/images/resources/user2.png" alt="">
-                      <h3>John Doe</h3>
-                      <span>Graphic Designer</span>
-                      <ul>
-                        <li><a href="#" title="" class="followw" tabindex="0">Follow</a></li>
-                        <li><a href="#" title="" class="envlp" tabindex="0"><img src="assets/images/envelop.png" alt=""></a></li>
-                        <li><a href="#" title="" class="hire" tabindex="0">hire</a></li>
-                      </ul>
-                      <a href="#" title="" tabindex="0">View Profile</a>
-                    </div><div class="user-profy slick-slide slick-active" tabindex="0" style="width: 201px;" data-slick-index="5" aria-hidden="false">
-                      <img src="assets/images/resources/user3.png" alt="">
-                      <h3>John Doe</h3>
-                      <span>Graphic Designer</span>
-                      <ul>
-                        <li><a href="#" title="" class="followw" tabindex="0">Follow</a></li>
-                        <li><a href="#" title="" class="envlp" tabindex="0"><img src="assets/images/envelop.png" alt=""></a></li>
-                        <li><a href="#" title="" class="hire" tabindex="0">hire</a></li>
-                      </ul>
-                      <a href="#" title="" tabindex="0">View Profile</a>
-                    </div><div class="user-profy slick-slide slick-cloned" tabindex="-1" style="width: 201px;" data-slick-index="6" aria-hidden="true">
-                      <img src="assets/images/resources/user1.png" alt="">
-                      <h3>John Doe</h3>
-                      <span>Graphic Designer</span>
-                      <ul>
-                        <li><a href="#" title="" class="followw" tabindex="-1">Follow</a></li>
-                        <li><a href="#" title="" class="envlp" tabindex="-1"><img src="assets/images/envelop.png" alt=""></a></li>
-                        <li><a href="#" title="" class="hire" tabindex="-1">hire</a></li>
-                      </ul>
-                      <a href="#" title="" tabindex="-1">View Profile</a>
-                    </div><div class="user-profy slick-slide slick-cloned" tabindex="-1" style="width: 201px;" data-slick-index="7" aria-hidden="true">
-                      <img src="assets/images/resources/user2.png" alt="">
-                      <h3>John Doe</h3>
-                      <span>Graphic Designer</span>
-                      <ul>
-                        <li><a href="#" title="" class="followw" tabindex="-1">Follow</a></li>
-                        <li><a href="#" title="" class="envlp" tabindex="-1"><img src="assets/images/envelop.png" alt=""></a></li>
-                        <li><a href="#" title="" class="hire" tabindex="-1">hire</a></li>
-                      </ul>
-                      <a href="#" title="" tabindex="-1">View Profile</a>
-                    </div><div class="user-profy slick-slide slick-cloned" tabindex="-1" style="width: 201px;" data-slick-index="8" aria-hidden="true">
-                      <img src="assets/images/resources/user3.png" alt="">
-                      <h3>John Doe</h3>
-                      <span>Graphic Designer</span>
-                      <ul>
-                        <li><a href="#" title="" class="followw" tabindex="-1">Follow</a></li>
-                        <li><a href="#" title="" class="envlp" tabindex="-1"><img src="assets/images/envelop.png" alt=""></a></li>
-                        <li><a href="#" title="" class="hire" tabindex="-1">hire</a></li>
-                      </ul>
-                      <a href="#" title="" tabindex="-1">View Profile</a>
-                    </div><div class="user-profy slick-slide slick-cloned" tabindex="-1" style="width: 201px;" data-slick-index="9" aria-hidden="true">
-                      <img src="assets/images/resources/user1.png" alt="">
-                      <h3>John Doe</h3>
-                      <span>Graphic Designer</span>
-                      <ul>
-                        <li><a href="#" title="" class="followw" tabindex="-1">Follow</a></li>
-                        <li><a href="#" title="" class="envlp" tabindex="-1"><img src="assets/images/envelop.png" alt=""></a></li>
-                        <li><a href="#" title="" class="hire" tabindex="-1">hire</a></li>
-                      </ul>
-                      <a href="#" title="" tabindex="-1">View Profile</a>
-                    </div><div class="user-profy slick-slide slick-cloned" tabindex="-1" style="width: 201px;" data-slick-index="10" aria-hidden="true">
-                      <img src="assets/images/resources/user2.png" alt="">
-                      <h3>John Doe</h3>
-                      <span>Graphic Designer</span>
-                      <ul>
-                        <li><a href="#" title="" class="followw" tabindex="-1">Follow</a></li>
-                        <li><a href="#" title="" class="envlp" tabindex="-1"><img src="assets/images/envelop.png" alt=""></a></li>
-                        <li><a href="#" title="" class="hire" tabindex="-1">hire</a></li>
-                      </ul>
-                      <a href="#" title="" tabindex="-1">View Profile</a>
-                    </div><div class="user-profy slick-slide slick-cloned" tabindex="-1" style="width: 201px;" data-slick-index="11" aria-hidden="true">
-                      <img src="assets/images/resources/user3.png" alt="">
-                      <h3>John Doe</h3>
-                      <span>Graphic Designer</span>
-                      <ul>
-                        <li><a href="#" title="" class="followw" tabindex="-1">Follow</a></li>
-                        <li><a href="#" title="" class="envlp" tabindex="-1"><img src="assets/images/envelop.png" alt=""></a></li>
-                        <li><a href="#" title="" class="hire" tabindex="-1">hire</a></li>
-                      </ul>
-                      <a href="#" title="" tabindex="-1">View Profile</a>
-                    </div></div></div><span class="slick-nexti slick-arrow" style="display: inline;"></span></div><!--profiles-slider end-->
-                </div><!--top-profiles end-->
-                <div class="post-bar">
-                  <div class="post_topbar" style="margin-bottom: 20px;">
-                    <div class="usy-dt">
-                      <img src="assets/images/wd-logo.png" alt="" style="height: 50px; width: 50px;">
-                      <div class="usy-name">
-                        <h3>WorkWise</h3>
-                        <span><img src="assets/images/clock.png" alt="">3 min ago</span>
-                      </div>
-                    </div>
-                    <div class="ed-opts">
-                      <a href="#" title="" class="ed-opts-open"><i class="la la-ellipsis-v"></i></a>
-                      <ul class="ed-options">
-                        <li><a href="#" title="">Edit Post</a></li>
-                        <li><a href="#" title="">Unsaved</a></li>
-                        <li><a href="#" title="">Unbid</a></li>
-                        <li><a href="#" title="">Close</a></li>
-                        <li><a href="#" title="">Hide</a></li>
-                      </ul>
-                    </div>
-                  </div>
-                  <div class="job_descp">
-                    <h3>Maintenance Notification:</h3>
-                    <div class="job_descp" style="margin-bottom: 10px;">
-                      <img src="assets/images/resources/maintenance.png" alt="Image Description">
-                    </div>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam luctus hendrerit metus, ut ullamcorper quam finibus at. Etiam id magna sit amet... <a href="#" title="">view more</a></p>
+                </div>
+              </div>
 
-                  </div>
-                  <ul class="skill-tags">
-                    <li><a href="#" title="">Important</a></li>
-                    <li><a href="#" title="">Announcement</a></li>
-                    <li><a href="#" title="">Maitencance</a></li>
-                  </ul>
-                </div><!--post-bar end-->
-
-                <div class="process-comm">
-                  <div class="spinner">
-                    <div class="bounce1"></div>
-                    <div class="bounce2"></div>
-                    <div class="bounce3"></div>
-                  </div>
-                </div><!--process-comm end-->
-              </div><!--posts-section end-->
             </div><!--main-ws-sec end-->
           </div>
           <div class="col-lg-3 pd-right-none no-pd">
