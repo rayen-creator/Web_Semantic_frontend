@@ -1,4 +1,4 @@
-<main>
+<section>
   <div class="main-section">
     <div class="container">
       <div class="main-section-data">
@@ -123,6 +123,7 @@
               </div><!--post-topbar end-->
               <div class="posts-section">
                 <div class="post-bar">
+                <div class="post-bar" *ngFor="let p of posts ; index as i" >
                     <div class="post_topbar">
                         <div class="usy-dt">
                             <img src="assets/images/resources/user.png'"
@@ -137,12 +138,10 @@
                                     class="fa fa-ellipsis-v"></i></a>
                             <ul class="ed-options">
                                     
-                                        <li><a  href="">Edit Post</a></li>
+                                       
                                         <li><a  href="">details</a></li>
                                     
-                                        <li><a class="text-danger"  href="#" title="">Delete</a></li>
-                                   
-                                
+                                       
                               
                                 
                             </ul>
@@ -166,15 +165,17 @@
                         </ul>
                     </div>
                     <div class="job_descp">
-                        <h3>Title</h3>
-                        <img class="w-48 mr-6 mb-6"  src="assets/images/resources/dsd.jpg" alt="">
+                        <h3>{{p.Title }}</h3>
+                        <img class="w-48 mr-6 mb-6"  src="{{p.Image_Post }}" alt="">
                                 
                         <ul class="job-dt">
                         <br>
-                            <li><a href="" title="">Career Advice</a></li>
+                            <li><a href="" title="">{{p.Category
+                            }}</a></li>
                             
                             
-                           <li><br> <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate vitae temporibus totam tenetur labore quam ipsam nemo error dolorem exercitationem voluptatibus, beatae minima, rem dicta laudantium, modi assumenda possimus unde? </p></li>
+                           <li><br> <p> {{p.content_post
+                          }} </p></li>
                         </ul>
                        
                        
@@ -193,178 +194,14 @@
            
             
 
-                <div class="process-comm">
-                  <div class="spinner">
-                    <div class="bounce1"></div>
-                    <div class="bounce2"></div>
-                    <div class="bounce3"></div>
-                  </div>
-                </div><!--process-comm end-->
+               
               </div><!--posts-section end-->
             </div><!--main-ws-sec end-->
           </div>
-          <div class="col-lg-3 pd-right-none no-pd">
-            <div class="right-sidebar">
-              <div class="widget widget-about">
-                <img src="assets/images/wd-logo.png" alt="">
-                <h3>Track Time on Workwise</h3>
-                <span>Pay only for the Hours worked</span>
-                <div class="sign_link">
-                  <h3><a href="sign-in.html" title="">Sign up</a></h3>
-                  <a href="#" title="">Learn More</a>
-                </div>
-              </div><!--widget-about end-->
-              <div class="widget widget-jobs">
-                <div class="sd-title">
-                  <h3>Top Jobs</h3>
-                  <i class="la la-ellipsis-v"></i>
-                </div>
-                <div class="jobs-list">
-                  <div class="job-info">
-                    <div class="job-details">
-                      <h3>Senior Product Designer</h3>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit..</p>
-                    </div>
-                    <div class="hr-rate">
-                      <span>$25/hr</span>
-                    </div>
-                  </div><!--job-info end-->
-                  <div class="job-info">
-                    <div class="job-details">
-                      <h3>Senior UI / UX Designer</h3>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit..</p>
-                    </div>
-                    <div class="hr-rate">
-                      <span>$25/hr</span>
-                    </div>
-                  </div><!--job-info end-->
-                  <div class="job-info">
-                    <div class="job-details">
-                      <h3>Junior Seo Designer</h3>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit..</p>
-                    </div>
-                    <div class="hr-rate">
-                      <span>$25/hr</span>
-                    </div>
-                  </div><!--job-info end-->
-                  <div class="job-info">
-                    <div class="job-details">
-                      <h3>Senior PHP Designer</h3>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit..</p>
-                    </div>
-                    <div class="hr-rate">
-                      <span>$25/hr</span>
-                    </div>
-                  </div><!--job-info end-->
-                  <div class="job-info">
-                    <div class="job-details">
-                      <h3>Senior Developer Designer</h3>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit..</p>
-                    </div>
-                    <div class="hr-rate">
-                      <span>$25/hr</span>
-                    </div>
-                  </div><!--job-info end-->
-                </div><!--jobs-list end-->
-              </div><!--widget-jobs end-->
-              <div class="widget widget-jobs">
-                <div class="sd-title">
-                  <h3>Most Viewed This Week</h3>
-                  <i class="la la-ellipsis-v"></i>
-                </div>
-                <div class="jobs-list">
-                  <div class="job-info">
-                    <div class="job-details">
-                      <h3>Senior Product Designer</h3>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit..</p>
-                    </div>
-                    <div class="hr-rate">
-                      <span>$25/hr</span>
-                    </div>
-                  </div><!--job-info end-->
-                  <div class="job-info">
-                    <div class="job-details">
-                      <h3>Senior UI / UX Designer</h3>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit..</p>
-                    </div>
-                    <div class="hr-rate">
-                      <span>$25/hr</span>
-                    </div>
-                  </div><!--job-info end-->
-                  <div class="job-info">
-                    <div class="job-details">
-                      <h3>Junior Seo Designer</h3>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit..</p>
-                    </div>
-                    <div class="hr-rate">
-                      <span>$25/hr</span>
-                    </div>
-                  </div><!--job-info end-->
-                </div><!--jobs-list end-->
-              </div><!--widget-jobs end-->
-              <div class="widget suggestions full-width">
-                <div class="sd-title">
-                  <h3>Most Viewed People</h3>
-                  <i class="la la-ellipsis-v"></i>
-                </div><!--sd-title end-->
-                <div class="suggestions-list">
-                  <div class="suggestion-usd">
-                    <img src="assets/images/resources/s1.png" alt="">
-                    <div class="sgt-text">
-                      <h4>Jessica William</h4>
-                      <span>Graphic Designer</span>
-                    </div>
-                    <span><i class="la la-plus"></i></span>
-                  </div>
-                  <div class="suggestion-usd">
-                    <img src="assets/images/resources/s2.png" alt="">
-                    <div class="sgt-text">
-                      <h4>John Doe</h4>
-                      <span>PHP Developer</span>
-                    </div>
-                    <span><i class="la la-plus"></i></span>
-                  </div>
-                  <div class="suggestion-usd">
-                    <img src="assets/images/resources/s3.png" alt="">
-                    <div class="sgt-text">
-                      <h4>Poonam</h4>
-                      <span>Wordpress Developer</span>
-                    </div>
-                    <span><i class="la la-plus"></i></span>
-                  </div>
-                  <div class="suggestion-usd">
-                    <img src="assets/images/resources/s4.png" alt="">
-                    <div class="sgt-text">
-                      <h4>Bill Gates</h4>
-                      <span>C &amp; C++ Developer</span>
-                    </div>
-                    <span><i class="la la-plus"></i></span>
-                  </div>
-                  <div class="suggestion-usd">
-                    <img src="assets/images/resources/s5.png" alt="">
-                    <div class="sgt-text">
-                      <h4>Jessica William</h4>
-                      <span>Graphic Designer</span>
-                    </div>
-                    <span><i class="la la-plus"></i></span>
-                  </div>
-                  <div class="suggestion-usd">
-                    <img src="assets/images/resources/s6.png" alt="">
-                    <div class="sgt-text">
-                      <h4>John Doe</h4>
-                      <span>PHP Developer</span>
-                    </div>
-                    <span><i class="la la-plus"></i></span>
-                  </div>
-                  <div class="view-more">
-                    <a href="#" title="">View More</a>
-                  </div>
-                </div><!--suggestions-list end-->
-              </div>
-            </div><!--right-sidebar end-->
-          </div>
+         
         </div>
       </div><!-- main-section-data end-->
     </div>
   </div>
-</main>
+
+ 
