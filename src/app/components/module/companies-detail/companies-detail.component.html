@@ -1,0 +1,298 @@
+
+<div class="wrapper py-2">
+		
+ 
+
+    <section class="cover-sec">
+        <img src="/assets/images/resources/company-cover.jpg" alt="">
+    </section><!--cover-sec end-->
+
+
+    <main>
+        <div class="main-section">
+            <div class="container">
+                <div class="main-section-data">
+                    <div class="row">
+                        <div class="col-lg-3">
+                            <div class="main-left-sidebar">
+                                <div class="user_profile">
+                                    <div class="user-pro-img">
+                                        <img src="/assets/images/resources/company-profile.png" alt="">
+                                    </div><!--user-pro-img end-->
+                                    
+                                </div><!--user_profile end-->
+                                <div class="suggestions full-width">
+                                    <div class="sd-title">
+                                        <h3>Suggestions</h3>
+                                        <i class="la la-ellipsis-v"></i>
+                                    </div><!--sd-title end-->
+                                    <div class="suggestions-list">
+                                        <div class="suggestion-usd">
+                                            <img src="/assets/images/resources/s1.png" alt="">
+                                            <div class="sgt-text">
+                                                <h4>Jessica William</h4>
+                                                <span>Graphic Designer</span>
+                                            </div>
+                                            <span><i class="la la-plus"></i></span>
+                                        </div>
+                                        <div class="suggestion-usd">
+                                            <img src="/assets/images/resources/s2.png" alt="">
+                                            <div class="sgt-text">
+                                                <h4>John Doe</h4>
+                                                <span>PHP Developer</span>
+                                            </div>
+                                            <span><i class="la la-plus"></i></span>
+                                        </div>
+                                        <div class="suggestion-usd">
+                                            <img src="/assets/images/resources/s3.png" alt="">
+                                            <div class="sgt-text">
+                                                <h4>Poonam</h4>
+                                                <span>Wordpress Developer</span>
+                                            </div>
+                                            <span><i class="la la-plus"></i></span>
+                                        </div>
+                                        <div class="suggestion-usd">
+                                            <img src="/assets/images/resources/s4.png" alt="">
+                                            <div class="sgt-text">
+                                                <h4>Bill Gates</h4>
+                                                <span>C & C++ Developer</span>
+                                            </div>
+                                            <span><i class="la la-plus"></i></span>
+                                        </div>
+                                        <div class="suggestion-usd">
+                                            <img src="/assets/images/resources/s5.png" alt="">
+                                            <div class="sgt-text">
+                                                <h4>Jessica William</h4>
+                                                <span>Graphic Designer</span>
+                                            </div>
+                                            <span><i class="la la-plus"></i></span>
+                                        </div>
+                                        <div class="suggestion-usd">
+                                            <img src="/assets/images/resources/s6.png" alt="">
+                                            <div class="sgt-text">
+                                                <h4>John Doe</h4>
+                                                <span>PHP Developer</span>
+                                            </div>
+                                            <span><i class="la la-plus"></i></span>
+                                        </div>
+                                        <div class="view-more">
+                                            <a href="#" title="">View More</a>
+                                        </div>
+                                    </div><!--suggestions-list end-->
+                                </div><!--suggestions end-->
+                            </div><!--main-left-sidebar end-->
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="main-ws-sec">
+                                <div class="user-tab-sec">
+                                    <h3>{{company[0].Name_Company}}</h3>
+                                    <div class="star-descp">
+                                        <span>Established {{company[0].Founding_Date.toString().split("^")[0]}}</span>
+                                        <ul>
+                                            <li><i class="fa fa-star"></i></li>
+                                            <li><i class="fa fa-star"></i></li>
+                                            <li><i class="fa fa-star"></i></li>
+                                            <li><i class="fa fa-star"></i></li>
+                                            <li><i class="fa fa-star-half-o"></i></li>
+                                        </ul>
+                                    </div><!--star-descp end-->
+                                    <div class="tab-feed">
+                                        <ul>
+                                            <li data-tab="feed-dd" class="active">
+                                                <a href="#" title="" class="py-1">
+                                                    <img src="/assets/images/ic1.png" alt="">
+                                                    <span>{{company[0].Location_Company}}</span>
+                                                </a>
+                                                <a href="#" title="">
+                                                    <img src="/assets/images/ic2.png" alt="">
+                                                    <span>{{company[0].Services}}</span>
+                                                </a>
+                                            </li>
+                                            <li data-tab="info-dd">
+                                               
+                                            </li>
+                                        
+                                        </ul>
+                                    </div><!-- tab-feed end-->
+                                </div>
+                                <!-- feed -->
+                               <app-job [company_name]="company[0].Name_Company"></app-job>
+                       
+                            </div><!--main-ws-sec end-->
+                        </div>
+                        <div class="col-lg-3">
+                            <div class="right-sidebar">
+                                <div class="message-btn">
+                                    <a href="#" title=""><i class="fa fa-envelope"></i> Message</a>
+                                </div>
+                              
+                            </div><!--right-sidebar end-->
+                        </div>
+                    </div>
+                </div><!-- main-section-data end-->
+            </div> 
+        </div>
+    </main>
+
+
+    <footer>
+        <div class="footy-sec mn no-margin">
+            <div class="container">
+                <ul>
+                    <li><a href="help-center.html" title="">Help Center</a></li>
+                    <li><a href="about.html" title="">About</a></li>
+                    <li><a href="#" title="">Privacy Policy</a></li>
+                    <li><a href="#" title="">Community Guidelines</a></li>
+                    <li><a href="#" title="">Cookies Policy</a></li>
+                    <li><a href="#" title="">Career</a></li>
+                    <li><a href="forum.html" title="">Forum</a></li>
+                    <li><a href="#" title="">Language</a></li>
+                    <li><a href="#" title="">Copyright Policy</a></li>
+                </ul>
+                <p><img src="/assets/images/copy-icon2.png" alt="">Copyright 2018</p>
+                <img class="fl-rgt" src="/assets/images/logo2.png" alt="">
+            </div>
+        </div>
+    </footer><!--footer end-->
+
+
+    <div class="overview-box" id="overview-box">
+        <div class="overview-edit">
+            <h3>Overview</h3>
+            <span>5000 character left</span>
+            <form>
+                <textarea></textarea>
+                <button type="submit" class="save">Save</button>
+                <button type="submit" class="cancel">Cancel</button>
+            </form>
+            <a href="#" title="" class="close-box"><i class="la la-close"></i></a>
+        </div><!--overview-edit end-->
+    </div><!--overview-box end-->
+
+
+    <div class="overview-box" id="experience-box">
+        <div class="overview-edit">
+            <h3>Experience</h3>
+            <form>
+                <input type="text" name="subject" placeholder="Subject">
+                <textarea></textarea>
+                <button type="submit" class="save">Save</button>
+                <button type="submit" class="save-add">Save & Add More</button>
+                <button type="submit" class="cancel">Cancel</button>
+            </form>
+            <a href="#" title="" class="close-box"><i class="la la-close"></i></a>
+        </div><!--overview-edit end-->
+    </div><!--overview-box end-->
+
+    <div class="overview-box" id="education-box">
+        <div class="overview-edit">
+            <h3>Education</h3>
+            <form>
+                <input type="text" name="school" placeholder="School / University">
+                <div class="datepicky">
+                    <div class="row">
+                        <div class="col-lg-6 no-left-pd">
+                            <div class="datefm">
+                                <input type="text" name="from" placeholder="From" class="datepicker">	
+                                <i class="fa fa-calendar"></i>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 no-righ-pd">
+                            <div class="datefm">
+                                <input type="text" name="to" placeholder="To" class="datepicker">
+                                <i class="fa fa-calendar"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <input type="text" name="degree" placeholder="Degree">
+                <textarea placeholder="Description"></textarea>
+                <button type="submit" class="save">Save</button>
+                <button type="submit" class="save-add">Save & Add More</button>
+                <button type="submit" class="cancel">Cancel</button>
+            </form>
+            <a href="#" title="" class="close-box"><i class="la la-close"></i></a>
+        </div><!--overview-edit end-->
+    </div><!--overview-box end-->
+
+    <div class="overview-box" id="location-box">
+        <div class="overview-edit">
+            <h3>Location</h3>
+            <form>
+                <div class="datefm">
+                    <select>
+                        <option>Country</option>
+                        <option value="pakistan">Pakistan</option>
+                        <option value="england">England</option>
+                        <option value="india">India</option>
+                        <option value="usa">United Sates</option>
+                    </select>
+                    <i class="fa fa-globe"></i>
+                </div>
+                <div class="datefm">
+                    <select>
+                        <option>City</option>
+                        <option value="london">London</option>
+                        <option value="new-york">New York</option>
+                        <option value="sydney">Sydney</option>
+                        <option value="chicago">Chicago</option>
+                    </select>
+                    <i class="fa fa-map-marker"></i>
+                </div>
+                <button type="submit" class="save">Save</button>
+                <button type="submit" class="cancel">Cancel</button>
+            </form>
+            <a href="#" title="" class="close-box"><i class="la la-close"></i></a>
+        </div><!--overview-edit end-->
+    </div><!--overview-box end-->
+
+    <div class="overview-box" id="skills-box">
+        <div class="overview-edit">
+            <h3>Skills</h3>
+            <ul>
+                <li><a href="#" title="" class="skl-name">HTML</a><a href="#" title="" class="close-skl"><i class="la la-close"></i></a></li>
+                <li><a href="#" title="" class="skl-name">php</a><a href="#" title="" class="close-skl"><i class="la la-close"></i></a></li>
+                <li><a href="#" title="" class="skl-name">css</a><a href="#" title="" class="close-skl"><i class="la la-close"></i></a></li>
+            </ul>
+            <form>
+                <input type="text" name="skills" placeholder="Skills">
+                <button type="submit" class="save">Save</button>
+                <button type="submit" class="save-add">Save & Add More</button>
+                <button type="submit" class="cancel">Cancel</button>
+            </form>
+            <a href="#" title="" class="close-box"><i class="la la-close"></i></a>
+        </div><!--overview-edit end-->
+    </div><!--overview-box end-->
+
+
+    <div class="overview-box" id="establish-box">
+        <div class="overview-edit">
+            <h3>Establish Since</h3>
+            <form>
+                <div class="daty">
+                    <input type="text" name="establish" placeholder="Select Date" class="datepicker">
+                    <i class="fa fa-calendar"></i>
+                </div>
+                <button type="submit" class="save">Save</button>
+                <button type="submit" class="cancel">Cancel</button>
+            </form>
+            <a href="#" title="" class="close-box"><i class="la la-close"></i></a>
+        </div><!--overview-edit end-->
+    </div><!--overview-box end-->
+
+
+    <div class="overview-box" id="total-employes">
+        <div class="overview-edit">
+            <h3>Total Employees</h3>
+            <form>
+                <input type="text" name="employes" placeholder="Type in numbers">
+                <button type="submit" class="save">Save</button>
+                <button type="submit" class="cancel">Cancel</button>
+            </form>
+            <a href="#" title="" class="close-box"><i class="la la-close"></i></a>
+        </div><!--overview-edit end-->
+    </div><!--overview-box end-->
+
+
+
+</div><!--theme-layout end-->
