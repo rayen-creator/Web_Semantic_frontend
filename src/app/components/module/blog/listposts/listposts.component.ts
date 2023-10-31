@@ -21,4 +21,8 @@ export class ListpostsComponent {
       console.log("posts:",this.posts)
     })
   }
+  encodeTitle(title: string) {
+    // Replace spaces with underscores
+    return title.replace(/ /g, '%20');
+  }
 }

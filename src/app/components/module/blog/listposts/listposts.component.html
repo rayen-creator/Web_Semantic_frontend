@@ -126,27 +126,14 @@
                 <div class="post-bar" *ngFor="let p of posts ; index as i" >
                     <div class="post_topbar">
                         <div class="usy-dt">
-                            <img src="assets/images/resources/user.png'"
+                            <img src="assets/images/resources/user.png"
                                 alt="">
                             <div class="usy-name">
                                 <h3>User Name </h3>
 
                             </div>
                         </div>
-                        <div class="ed-opts">
-                            <a href="#" title="" class="ed-opts-open"><i
-                                    class="fa fa-ellipsis-v"></i></a>
-                            <ul class="ed-options">
-                                    
-                                       
-                                        <li><a  href="">details</a></li>
-                                    
-                                       
-                              
-                                
-                            </ul>
-                        </div>
-                    </div>
+             
                     <div class="epi-sec">
                         <ul class="descp">
                             <li><img src="assets/images/icon8.png"
@@ -156,12 +143,10 @@
                                     alt=""><span>Tunisia</span></li>
                         </ul>
                         <ul class="bk-links">
-                            <li><a href="#" title=""><i
-                                        class="fa fa-bookmark"></i></a>
+                            <li><a class="view-more-pro" routerLink="/module/blog/details/{{p.Title}}">Details</a>
+
                             </li>
-                            <li><a href="#" title=""><i
-                                        class="fa fa-envelope"></i></a>
-                            </li>
+                            
                         </ul>
                     </div>
                     <div class="job_descp">
@@ -180,13 +165,7 @@
                        
                        
                     
-                        <div class="job-status-bar">
-                            <ul class="like-com">
-                               
-                           <li><a   class="com" href=""><i class="fa fa-comment-alt"></i> Comment </a></li>
-                            </ul>
-                    
-                        </div>
+                        
                       
                     </div>
 
