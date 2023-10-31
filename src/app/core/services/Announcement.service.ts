@@ -5,7 +5,7 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class AnnouncementService {
-  url = 'http://localhost:8005/SpringMVC/controller';
+  url = 'http://localhost:8005/SpringMVC/Announcement';
 
   constructor(private httpclient: HttpClient) { }
 
