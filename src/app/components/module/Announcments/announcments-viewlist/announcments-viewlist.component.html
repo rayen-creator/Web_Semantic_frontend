@@ -1,8 +1,20 @@
-<!-- ... Previous code ... -->
 
 <section class="forum-page">
   <div class="container">
     <div class="forum-questions-sec">
+      <div class="form-group row">
+        <label for="tagFilter" class="col-form-label col-sm-2">Filter by Tag:</label>
+        <div class="col-sm-4">
+          <select id="tagFilter" class="form-control" [(ngModel)]="selectedTag">
+            <option value="">All</option>
+            <option *ngFor="let tag of uniqueTags" [value]="tag">{{ tag }}</option>
+          </select>
+        </div>
+        <div class="col-sm-2">
+          <button class="btn btn-primary" (click)="applyTagFilter()">Apply Filter</button>
+        </div>
+      </div>
+
       <div class="row">
         <div class="col-lg-8">
           <div class="forum-questions">

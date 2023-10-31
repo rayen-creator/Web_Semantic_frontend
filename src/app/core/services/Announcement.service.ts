@@ -16,4 +16,8 @@ export class AnnouncementService {
   getAnnouncementById(id: string) {
     return this.httpclient.get(`${this.url}/getAnnouncementById/${id}`);
   }
+
+  getAnnouncementsByTag(tag: string) {
+    return this.httpclient.get(`${this.url}/getAnnouncementsByTag/${tag}`);
+  }
 }
