@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class EventService {
-  private baseUrl = 'http://localhost:8005/SpringMVC/controller';
+  private baseUrl = 'http://localhost:8005/SpringMVC/eventcontroller';
 
   constructor(private httpClient: HttpClient) { }
 
