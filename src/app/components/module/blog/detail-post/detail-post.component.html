@@ -1,113 +1,85 @@
 <main>
-    <div class="container mt-5">
-        
-        <div class="post-bar">
-                                        <div class="post_topbar">
-                                            <div class="usy-dt">
-                                            <img src="assets/images/resources/user.png"
-                                                    alt="">
-                                                <div class="usy-name">
-                                                    <h3>username  </h3>
-
-                                                </div>
-                                            </div>
-                                            
-                                        </div>
-                                        <div class="epi-sec">
-                                            <ul class="descp">
-                                                <li><img src="assets/images/icon8.png"
-                                                        alt=""><span>Service</span>
-                                                </li>
-                                                <li><img src="assets/images/icon9.png"
-                                                        alt=""><span>Tunisia</span></li>
-                                            </ul>
-                                            
-                                                
-                                        
-                                        </div>
-                                        <div class="job_descp">
-                                            <h3>{{post[0].Title}} </h3>
-                                            <img class="w-48 mr-6 mb-6"  src="{{post[0].Image_Post}}"
-                                                    alt="">
-                                                
-                                                    <ul class="job-dt">
-                                            <br>
-                                                <li><a  href="">{{post[0].Category}} </a></li>
-                                                
-                                                
-                                                <li><br> <p> {{post[0].content_post}} </p></li>
-                                            </ul>
-                                            
-                                            
-                                        
-                                            
-                                            
-                                            
-
-                                        </div>
-                                        
-                                        
-                                    </div><!--post-bar end-->
-                                    
-                                
-    </div>
-    <div class="container mt-5">
-    <div class="col-md-8 mx-auto">
-        
-        <!-- Fetch Comments -->
-        <div class="card my-4">
-            
-            
-                <div class="card-body">
-                  
-                      
-
-                        <ul class="bk-links">
-                            <li> <h4 style="margin-right: 250px;" >Comments</h4></li>
-                            <li>
-                                <a class="view-more-pro custom-go-back" href="module/blog/listpost">Go Back</a>
-                            </li>
-                        </ul>                  
-                       
-                                <div class="post_topbar" style="margin-top: 20px;">
-                                        
-                                    <h3><hr></h3>  
-                                                
-                                <div class="job_descp" *ngFor="let c of comments ; index as i">
-                                                            
-                                    <!-- Display comment content, user, and date -->
-                                    <img src="assets/images/resources/user.png"    style="margin-right: 10px;" alt="">     
-                                    
-                                    <h3> Author :{{c.Publisher}}  </h3>
-                                    <br>
-                                        <h4>{{c.Com_Content}} </h4>
-                                                                            
-                                            
-
-                                                                        <!-- Edit and Delete buttons for comments -->
-                                <div>
-                    
-                                                                        
-                                                </div>
-                                        <h3><hr></h3>   
-                                    
-                
-                                    
-                                </div><!--post-bar end-->
-
-                            
-                    
-                </div>
-                                        
-                            
-                                        
-                                                
-                                                    
-            </div>
+  <div class="container mt-5">
+    <div class="post-bar">
+      <div class="post_topbar">
+        <div class="usy-dt">
+          <img src="assets/images/resources/user.png" alt="" />
+          <div class="usy-name">
+            <h3>username</h3>
+          </div>
         </div>
-    </div>
-                
-                                            
-    </div>
+      </div>
+      <div class="epi-sec">
+        <ul class="descp">
+          <li>
+            <img src="assets/images/icon8.png" alt="" /><span>Service</span>
+          </li>
+          <li>
+            <img src="assets/images/icon9.png" alt="" /><span>Tunisia</span>
+          </li>
+        </ul>
+      </div>
+      <div class="job_descp">
+        <h3>{{ post[0].Title }}</h3>
+        <img class="w-48 mr-6 mb-6" src="{{ post[0].Image_Post }}" alt="" />
 
-   
+        <ul class="job-dt">
+          <br />
+          <li>
+            <a href="">{{ post[0].Category }} </a>
+          </li>
+
+          <li>
+            <br />
+            <p>{{ post[0].content_post }}</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!--post-bar end-->
+  </div>
+  <div class="container mt-5">
+    <div class="col-md-8 mx-auto">
+      <!-- Fetch Comments -->
+      <div class="card my-4">
+        <div class="card-body">
+          <ul class="bk-links">
+            <li>
+              <h4 style="margin-right: 250px">Comments</h4>
+            </li>
+            <li>
+              <a
+                class="view-more-pro custom-go-back"
+                routerLink="blog/listpost"
+                >Go Back</a
+              >
+            </li>
+          </ul>
+          <div class="post_topbar" style="margin-top: 20px">
+            <h3>
+              <hr />
+            </h3>
+            <div class="job_descp" *ngFor="let c of comments; index as i">
+              <!-- Display comment content, user, and date -->
+              <img
+                src="assets/images/resources/user.png"
+                style="margin-right: 10px"
+                alt=""
+              />
+
+              <h3>Author :{{ c.Publisher }}</h3>
+              <br />
+              <h4>{{ c.Com_Content }}</h4>
+              <!-- Edit and Delete buttons for comments -->
+              <div></div>
+              <h3>
+                <hr />
+              </h3>
+            </div>
+            <!--post-bar end-->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
