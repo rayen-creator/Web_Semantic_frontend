@@ -1,0 +1,32 @@
+.main-ws-sec {
+    padding-top: 50px;
+    margin-top: 50px;
+}
+
+h2 {
+    color: rgb(139, 80, 38);
+    margin-bottom: 20px;
+
+}
+h1{
+    color: brown;
+    font-size: 20px;
+}
+
+.select {
+    width: 100%;
+
+}
+
+.select-bar {
+    width: 50%;
+    margin-top: 20px;
+    border-radius: 4px;
+    margin-right: 10px;
+}
+.button{
+    border-radius: 4px;
+}
+.post-bar{
+    width: 500px;
+}
