@@ -5,8 +5,6 @@ import { BlogRoutingModule } from './blog-routing.module';
 import { BlogComponent } from './blog.component';
 import { ListpostsComponent } from './listposts/listposts.component';
 import { DetailPostComponent } from './detail-post/detail-post.component';
-import { EncodeURIComponentPipe } from 'src/app/core/helpers/encode-uricomponent.pipe';
-
 
 
 @NgModule({

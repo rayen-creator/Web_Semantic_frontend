@@ -17,4 +17,7 @@ export class BlogService {
   getCommentsnypost(title: string){
     return this.httpclient.get(this.url+'/getcommentspypost/'+title);
   }
+  getblogbycat(cat: string){
+    return this.httpclient.get(this.url+'/getBlogsbycat/'+cat);
+  }
 }

@@ -7,6 +7,7 @@ import { DetailPostComponent } from './detail-post/detail-post.component';
 
 const routes: Routes = [{ path: '', component: BlogComponent },
 { path: 'listpost', component: ListpostsComponent },
+{ path: 'listpost/:cat', component: ListpostsComponent },
 { path: 'details/:title', component: DetailPostComponent },
 ]
 
