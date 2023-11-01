@@ -5,7 +5,6 @@ import { EventsRoutingModule } from './events-routing.module';
 import { EventsComponent } from './events.component';
 import { ListEventsComponent } from './list-events/list-events.component';
 import { EventDetailsComponent } from './event-details/event-details.component';
-import { AddEventComponent } from './add-event/add-event.component';
 
 
 @NgModule({
@@ -13,7 +12,6 @@ import { AddEventComponent } from './add-event/add-event.component';
     EventsComponent,
     ListEventsComponent,
     EventDetailsComponent,
-    AddEventComponent
   ],
   imports: [
     CommonModule,
