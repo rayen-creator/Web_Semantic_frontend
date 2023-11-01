@@ -4,8 +4,7 @@
   </div>
   <div class="bennertext">
     <div class="innertitle">
-      <h2>World's largest freelancing and job portal<br>
-        social networking marketplace.</h2>
+      <h2>World's largest freelancing and job portal<br>social networking marketplace.</h2>
       <p>We connect over 3 Million employers and freelancers globally from over 237<br> countries, regions, and territories</p>
     </div>
   </div>
@@ -16,14 +15,14 @@
     <div class="row">
       <div class="col-md-6 col-sm-12">
         <h2>
-          New Feature Announcement :
+          {{ announcement?.Ann_Title }}
         </h2>
         <p>
-          We are thrilled to announce the launch of our new and improved collaboration tools. This feature is meticulously crafted to revolutionize how your team works together. Seamlessly communicate and foster teamwork among your project members with our cutting-edge tools. Real-time updates ensure that everyone is on the same page, and our intuitive file sharing capabilities make collaboration more efficient than ever before.
+          {{ announcement?.Ann_Description }}
         </p>
       </div>
       <div class="col-md-6 col-sm-12">
-        <img src="assets/images/resources/announcement.jpeg" alt="image">
+        <img src="{{ announcement?.Ann_Image_Url }}" alt="image">
       </div>
     </div>
   </div>

@@ -4,15 +4,15 @@ import { Injectable } from '@angular/core';
 @Injectable({
   providedIn: 'root'
 })
-export class CompanyService {
+export class JobService {
   url='http://localhost:8005/SpringMVC/controller';
   constructor(private httpclient:HttpClient) { }
 
-  getCompanies(){
-    return this.httpclient.get(this.url+'/getcompany');
+  getJobs(){
+    return this.httpclient.get(this.url+'/getJob');
   }
 
-  getCompanybyname(Name_Company:any){
-    return this.httpclient.get(`${this.url}/getcompanybyname/${Name_Company}`);
+  getJobBycompany(Name_Company:any){
+    return this.httpclient.get(`${this.url}/getJobBycompany/${Name_Company}`);
   }
 }

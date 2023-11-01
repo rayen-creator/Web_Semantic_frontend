@@ -5,6 +5,9 @@ import { AnnouncmentFormComponent } from "./Announcments/announcment-form/announ
 import { AnnouncmentsListComponent } from './Announcments/announcments-list/announcments-list.component';
 import { AnnouncmentsViewlistComponent } from './Announcments/announcments-viewlist/announcments-viewlist.component';
 import { AnnouncmentComponent } from './Announcments/announcment/announcment.component';
+import { CompaniesComponent } from './companies/companies.component';
+import { JobsComponent } from './jobs/jobs.component';
+import { CompaniesDetailComponent } from './companies-detail/companies-detail.component';
 
 const routes: Routes = [
 
@@ -13,6 +16,9 @@ const routes: Routes = [
     component: ModuleComponent,
     children: [
       { path: '', component: AnnouncmentsListComponent },
+      { path: 'companies', component: CompaniesComponent },
+      { path: 'company/:Name_Company', component: CompaniesDetailComponent },
+      { path: 'jobs', component: JobsComponent },
       { path: 'Events', loadChildren: () => import('./events/events.module').then(m => m.EventsModule) },
       { path: 'announcements', component: AnnouncmentsViewlistComponent },
       { path: 'announcement/:id', component: AnnouncmentComponent },

@@ -1,1 +1,27 @@
-<p>companies works!</p>
+<section class="companies-info">
+    <div class="container">
+        <div class="company-title">
+            <h3>All Companies</h3>
+        </div><!--company-title end-->
+        <div class="companies-list" >
+            <div class="row">
+                <div class="col-lg-3 col-md-4 col-sm-6" *ngFor="let c of companies ">
+                    <div class="company_profile_info">
+                        <div class="company-up-info">
+                            <img src="images/resources/cmp-icon.png" alt="">
+                            <h3>{{c.Name_Company }}</h3>
+                            <h4>Establish {{c.Founding_Date.toString().split("^")[0]}}</h4>
+                            <ul>
+                                <li><a href="#" title="" class="follow">Follow</a></li>
+                                <li><a href="#" title="" class="message-us"><i class="fa fa-envelope"></i></a></li>
+                            </ul>
+                        </div>
+                        <a routerLink="/company/{{c.Name_Company}}" class="view-more-pro">View company</a>
+                    </div><!--company_profile_info end-->
+                </div>
+            
+            </div>
+        </div><!--companies-list end-->
+       
+    </div>
+</section><!--companies-info end-->
