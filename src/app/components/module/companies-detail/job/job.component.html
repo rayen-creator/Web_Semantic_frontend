@@ -1,0 +1,38 @@
+<div class="product-feed-tab current" id="feed-dd">
+    <div class="posts-section">
+        <div class="post-bar">
+            <div class="post_topbar">
+                <div class="usy-dt">
+                    <img src="/assets/images/resources/company-pic.png" alt="">
+                    <div class="usy-name">
+                        <h3>{{company_name}}</h3>
+                        
+                    </div>
+                </div>
+         
+            </div>
+            <div class="epi-sec">
+                <ul class="descp">
+                    <li><img src="/assets/images/icon8.png" alt=""><span></span></li>
+                    <li><img src="/assets/images/icon9.png" alt=""><span></span></li>
+                </ul>
+        
+            </div>
+            <div class="job_descp">
+                <h3>{{job[0].Name}}</h3>
+                <ul class="job-dt py-1">
+                    <span style="background-color: red;" class="py-1 px-2 text-white "
+                        *ngIf="job[0].Status=='Closed'">{{job[0].Status}}</span>
+                    <span style="background-color: green;" class="py-1 px-2 text-white "
+                        *ngIf="job[0].Status=='Open'">{{job[0].Status}}</span>
+                    <li class="px-2"><span>{{job[0].duration_of_use}}</span></li>
+                </ul>
+                <p>
+                    {{job[0].Description}}
+                </p>
+
+            </div>
+
+        </div><!--post-bar end-->
+    </div><!--posts-section end-->
+</div>

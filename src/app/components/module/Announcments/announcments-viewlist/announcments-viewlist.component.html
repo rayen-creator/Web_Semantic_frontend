@@ -1,0 +1,51 @@
+
+<section class="forum-page">
+  <div class="container">
+    <div class="forum-questions-sec">
+      <div class="form-group row">
+        <label for="tagFilter" class="col-form-label col-sm-2">Filter by Tag:</label>
+        <div class="col-sm-4">
+          <select id="tagFilter" class="form-control" [(ngModel)]="selectedTag">
+            <option value="">All</option>
+            <option *ngFor="let tag of uniqueTags" [value]="tag">{{ tag }}</option>
+          </select>
+        </div>
+        <div class="col-sm-2">
+          <button class="btn btn-primary" (click)="applyTagFilter()">Apply Filter</button>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-8">
+          <div class="forum-questions">
+            <div class="usr-question" *ngFor="let announcement of announcements">
+              <!-- Add a class for styling -->
+              <div class="usr-question-item">
+                <div class="usr_img">
+                  <img src="assets/images/wd-logo.png" alt="" style="height: 50px; width: 50px;">
+                </div>
+                <div class="usr_quest">
+                  <p style="font-size: 20px; color: #e34d3a;">{{ announcement.Ann_Title }}</p>
+                  <h3><p>{{ announcement.Ann_Description }}</p></h3>
+                  <p><a [routerLink]="['/module/announcement', getAnnouncementId(announcement.id)]" title="">View More</a></p>
+                  <ul class="quest-tags">
+                    <li *ngFor="let tag of announcement.Announcement_has_tags"><a href="#" title="">{{ tag }}</a></li>
+                  </ul>
+                </div><!--usr_quest end-->
+                <span class="quest-posted-time"><i class="fa fa-clock-o"></i>3 min ago</span>
+              </div>
+            </div><!--usr-question end-->
+          </div><!--forum-questions end-->
+          <!-- ... Pagination code ... -->
+        </div>
+        <div class="col-lg-4">
+          <div class="widget widget-adver">
+            <img src="assets/images/resources/add1.jpg" alt="">
+          </div><!--widget-adver end-->
+        </div>
+      </div>
+    </div><!--forum-questions-sec end-->
+  </div>
+</section>
+
+<!-- ... Subsequent code ... -->

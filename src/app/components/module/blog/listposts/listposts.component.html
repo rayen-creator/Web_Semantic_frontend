@@ -1,0 +1,117 @@
+<section>
+  <div class="main-section">
+    <div class="container">
+      <div class="main-section-data">
+        <div class="row">
+          <div class="col-lg-3">
+            <div class="widget widget-about">
+                <img src="assets/images/resources/wd-logo.png"
+                     alt="">
+                <h3>Welcome To Our Blog</h3>
+               
+            </div><!--widget-about end-->
+            <div class="filter-secs">
+                <div class="filter-heading">
+                    <h3>Filters</h3>
+                    <a href="/module/blog/listpost" title="">Clear all filters</a>
+                </div><!--filter-heading end-->
+                <div class="paddy">
+                   
+                    <div class="filter-dd">
+                        <div class="filter-ttl">
+                            <h3>Post Type</h3>
+                            <a href="/module/blog/listpost" title="">Clear</a>
+                            <div class="post-st">
+                                <ul>
+                                   <li><a href="module/blog/listpost/Career Advice" title="">Career Advice</a></li> 
+                                   <li> <a href="module/blog/listpost/Entrepreneurship" title="">Entrepreneurship</a></li>
+                                   <li> <a href="module/blog/listpost/Mentorship" title="">Mentorship</a></li> 
+                                   <li><a href="module/blog/listpost/Success Stories" title="">Success Stories</a></li> 
+                        
+                                </ul>
+                            </div>
+                        </div>
+                        
+                    </div>
+
+                    
+                </div>
+            </div><!--filter-secs end-->
+        
+        </div>
+          <div class="col-lg-6 col-md-8 no-pd">
+            <div class="main-ws-sec">
+              <div class="post-topbar">
+                <div class="user-picy">
+                  <img src="assets/images/resources/user-pic.png" alt="">
+                </div>
+                <div class="post-st">
+                  <ul>
+                    <li><a class="post_project" href="#" title="">Add New Post</a></li>
+                  
+                  </ul>
+                </div><!--post-st end-->
+              </div><!--post-topbar end-->
+              <div class="posts-section">
+                <div class="post-bar">
+                <div class="post-bar" *ngFor="let p of posts ; index as i" >
+                    <div class="post_topbar">
+                        <div class="usy-dt">
+                            <img src="assets/images/resources/user.png"
+                                alt="">
+                            <div class="usy-name">
+                                <h3>Acil Farhat  </h3>
+
+                            </div>
+                        </div>
+             
+                    <div class="epi-sec">
+                        <ul class="descp">
+                            <li><img src="assets/images/icon8.png"
+                                    alt=""><span>Service</span>
+                            </li>
+                            <li><img src="assets/images/icon9.png"
+                                    alt=""><span>Tunisia</span></li>
+                        </ul>
+                        <ul class="bk-links">
+                            <li><a class="view-more-pro" routerLink="/module/blog/details/{{p.Title}}">Details</a>
+
+                            </li>
+                            
+                        </ul>
+                    </div>
+                    <div class="job_descp">
+                        <h3>{{p.Title }}</h3>
+                        <img class="w-48 mr-6 mb-6"  src="{{p.Image_Post }}" alt="">
+                                
+                        <ul class="job-dt">
+                        <br>
+                            <li><a href="" title="">{{p.Category
+                            }}</a></li>
+                            
+                            
+                           <li><br> <p> {{p.content_post
+                          }} </p></li>
+                        </ul>
+                       
+                       
+                    
+                        
+                      
+                    </div>
+
+                </div><!--post-bar end-->
+           
+            
+
+               
+              </div><!--posts-section end-->
+            </div><!--main-ws-sec end-->
+          </div>
+         
+        </div>
+      </div><!-- main-section-data end-->
+    </div>
+  </div>
+
+ 
