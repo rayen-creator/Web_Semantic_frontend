@@ -4,20 +4,19 @@ import { CommonModule } from '@angular/common';
 import { BlogRoutingModule } from './blog-routing.module';
 import { BlogComponent } from './blog.component';
 import { ListpostsComponent } from './listposts/listposts.component';
-import { AddcommentComponent } from './addcomment/addcomment.component';
-import { AddpostComponent } from './addpost/addpost.component';
+import { DetailPostComponent } from './detail-post/detail-post.component';
 
 
 @NgModule({
   declarations: [
     BlogComponent,
     ListpostsComponent,
-    AddcommentComponent,
-    AddpostComponent
+    DetailPostComponent
   ],
   imports: [
     CommonModule,
     BlogRoutingModule
+    
   ]
 })
 export class BlogModule { }
