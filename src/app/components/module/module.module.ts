@@ -9,9 +9,15 @@ import { ProfileComponent } from './profile/profile.component';
 import { CompaniesComponent } from './companies/companies.component';
 import { JobsComponent } from './jobs/jobs.component';
 
-import { FooterComponent } from './shared/footer/footer.component';
-import { HeaderComponent } from './shared/header/header.component';
 import { FormsModule } from '@angular/forms';
+import { AnnouncmentsListComponent } from './Announcments/announcments-list/announcments-list.component';
+import { AnnouncmentsViewlistComponent } from './Announcments/announcments-viewlist/announcments-viewlist.component';
+import { AnnouncmentComponent } from './Announcments/announcment/announcment.component';
+import { AnnouncmentFormComponent } from './Announcments/announcment-form/announcment-form.component';
+import { CompaniesDetailComponent } from './companies-detail/companies-detail.component';
+import { JobComponent } from './companies-detail/job/job.component';
+import { HeaderComponent } from './shared/header/header.component';
+import { FooterComponent } from './shared/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +26,6 @@ import { FormsModule } from '@angular/forms';
     ProfileComponent,
     CompaniesComponent,
     JobsComponent,
-
     HeaderComponent,
     FooterComponent,
     AnnouncmentsListComponent,
