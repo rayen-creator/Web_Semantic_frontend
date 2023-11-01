@@ -8,6 +8,8 @@ import { AnnouncmentComponent } from './Announcments/announcment/announcment.com
 import { CompaniesComponent } from './companies/companies.component';
 import { JobsComponent } from './jobs/jobs.component';
 import { CompaniesDetailComponent } from './companies-detail/companies-detail.component';
+import { ContratComponent } from './contrat/contrat.component';
+import { ReviewComponent } from './review/review.component';
 
 const routes: Routes = [
 
@@ -21,6 +23,8 @@ const routes: Routes = [
       { path: 'jobs', component: JobsComponent },
       { path: 'Events', loadChildren: () => import('./events/events.module').then(m => m.EventsModule) },
       { path: 'announcements', component: AnnouncmentsViewlistComponent },
+      { path: 'contrats', component: ContratComponent },
+      { path: 'reviews', component: ReviewComponent },
       { path: 'announcement/:id', component: AnnouncmentComponent },
       { path: 'announcements/create', component: AnnouncmentFormComponent },
       { path: 'blog', loadChildren: () => import('./blog/blog.module').then(m => m.BlogModule) }

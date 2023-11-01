@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
+import { ContratComponent } from './contrat/contrat.component';
+import { ReviewComponent } from './review/review.component';
 import { ModuleRoutingModule } from './module-routing.module';
 import { ModuleComponent } from './module.component';
 import { AboutComponent } from './about/about.component';
@@ -35,6 +36,8 @@ import { JobComponent } from './companies-detail/job/job.component';
     AnnouncmentFormComponent,
     CompaniesDetailComponent,
     JobComponent,
+    ContratComponent,
+    ReviewComponent
   ],
   imports: [
     CommonModule,

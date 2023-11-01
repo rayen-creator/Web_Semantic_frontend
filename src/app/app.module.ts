@@ -9,6 +9,7 @@ import {HttpClientModule} from "@angular/common/http";
   declarations: [
     AppComponent,
     AuthComponent,
+   
   ],
   imports: [
     BrowserModule,
