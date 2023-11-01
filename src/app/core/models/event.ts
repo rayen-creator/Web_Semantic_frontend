@@ -7,4 +7,6 @@ export interface Event {
   Event_has_reservation: string;
   type: string;
   Date: string;
+  event_Image:string;
+  Event_is_organized_by:string;
 }

@@ -20,10 +20,6 @@ export class EventService {
     return this.httpClient.get(url);
   }
 
-  getAttendees(eventLabel: string): Observable<any> {
-    const url = `${this.baseUrl}/getAttendees/${eventLabel}`;
-    return this.httpClient.get(url);
-  }
 
   getReservationsByEventLabel(eventLabel: string): Observable<any> {
     const url = `${this.baseUrl}/getReservations/${eventLabel}`;
