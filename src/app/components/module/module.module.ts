@@ -10,7 +10,8 @@ import { JobsComponent } from './jobs/jobs.component';
 
 import { FooterComponent } from './shared/footer/footer.component';
 import { HeaderComponent } from './shared/header/header.component';
-//import { ProjectComponent } from './project/project.component';
+
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,6 @@ import { HeaderComponent } from './shared/header/header.component';
     HeaderComponent,
     FooterComponent,
   ],
-  imports: [CommonModule, ModuleRoutingModule],
+  imports: [CommonModule, ModuleRoutingModule, FormsModule],
 })
 export class ModuleModule {}

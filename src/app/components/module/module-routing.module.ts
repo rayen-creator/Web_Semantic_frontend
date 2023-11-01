@@ -4,9 +4,17 @@ import { ModuleComponent } from './module.component';
 //import { ProjectsComponent } from './projects/projects.component';
 
 const routes: Routes = [
-  { path: '', component: ModuleComponent },
-  { path: 'project', loadChildren: () => import('./project/project.module').then(m => m.ProjectModule) },
-  //  { path: 'projects', component: ProjectsComponent },
+  {
+    path: '',
+    component: ModuleComponent,
+    children: [
+      {
+        path: 'project',
+        loadChildren: () =>
+          import('./project/project.module').then((m) => m.ProjectModule),
+      },
+    ],
+  },
 ];
 
 @NgModule({
