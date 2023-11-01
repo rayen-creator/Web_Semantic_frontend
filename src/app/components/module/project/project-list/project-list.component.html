@@ -1,4 +1,4 @@
-<section>
+<section class="forum-page">
   <div class="main-section">
     <div class="container">
       <div class="main-section-data">
@@ -126,10 +126,30 @@
                   <ul>
                     <li>
                       <a class="post_project" href="#" title=""
-                        >Add New Project</a
+                        >Search Project</a
                       >
                     </li>
                   </ul>
+                  <div class="filter-controls">
+                    <input
+                      type="text"
+                      [(ngModel)]="nameFilter"
+                      placeholder="Filter by Name"
+                      (input)="applyFilters('proname')"
+                      class="form-control"
+                    />
+                    <select
+                      [(ngModel)]="statusFilter"
+                      (change)="applyFilters('status')"
+                      class="form-control"
+                    >
+                      <option value="">All Status</option>
+                      <option value=" Not Started">Not Started</option>
+                      <option value=" In Progress">In Progress</option>
+                      <option value=" Completed">Completed</option>
+                      <!-- Add more status options if needed -->
+                    </select>
+                  </div>
                 </div>
                 <!--post-st end-->
               </div>
