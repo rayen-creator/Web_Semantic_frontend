@@ -9,6 +9,9 @@ import { EventDetailsComponent } from './event-details/event-details.component';
 const routes: Routes = [{ path: '', component: EventsComponent },
 { path: 'list', component: ListEventsComponent },
 { path: 'details/:label', component: EventDetailsComponent },
+{ path: 'list/:Category_event', component:  ListEventsComponent },
+
+
 ];
 
 @NgModule({

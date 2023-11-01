@@ -9,4 +9,5 @@ export interface Event {
   Date: string;
   event_Image:string;
   Event_is_organized_by:string;
+  Category_event:string;
 }

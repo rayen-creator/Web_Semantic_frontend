@@ -15,6 +15,11 @@ export class EventService {
     return this.httpClient.get(url);
   }
 
+  getEventsByCategory(category: string): Observable<any> {
+    const url = `${this.baseUrl}/getEventsByCategory/${category}`;
+    return this.httpClient.get(url);
+  }
+
   getEventByLabel(label: string): Observable<any> {
     const url = `${this.baseUrl}/getEventByLabel/${label}`;
     return this.httpClient.get(url);
@@ -30,4 +35,6 @@ export class EventService {
     const url = `${this.baseUrl}/getAllReservations`;
     return this.httpClient.get(url);
   }
+
+
 }

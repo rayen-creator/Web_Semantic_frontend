@@ -4,7 +4,9 @@
   <br>
   <br>
   <h4 class="font-weight-bold text-center mb-4 mt-4">Event Details</h4>
-</div>  <div class="row">
+
+
+<div class="row">
     <div class="col-md-6 h-100" *ngIf="event">
       <div class="card mx-auto mt-4" style="max-width: 400px;">
               <div class="card-header bg-orange text-center text-white"> {{event.label}}
@@ -12,11 +14,12 @@
 
               <div class="card-body">
                 <h5 class="card-title text-center">{{ event.Slogan }}</h5>
-                <br>
+                <br>                                    <img class="w-48 "  src="{{event.event_Image}}" alt="">
+
                 <br>
 
                   <p class="card-text">{{ event.Event_Content }}</p>
-<br><br>
+
                   <div class="text-center mt-3">
                     <a routerLink="/module/Events/list" class="custom-btn">Back to Events</a>
                 </div>
@@ -31,9 +34,7 @@
                 <ul>
                   <li *ngFor="let reservation of reservations" class="reservation-item">
 										<div class="usr-msg-details">
-											<div class="usr-ms-img">
-												<img src="assets/images/resources/user.png" alt="">
-											</div>
+
 											<div class="usr-mg-info">
 												<h3>{{ reservation.Res_User }}</h3>
 											</div><!--usr-mg-info end-->
@@ -46,3 +47,4 @@
           </div>
       </div>
   </div>
+</div>

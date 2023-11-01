@@ -9,33 +9,20 @@
                             <div class="filter-secs">
                                 <div class="filter-heading">
                                     <h3>Filters</h3>
-                                    <a href="/events" title="">Clear all filters</a>
+                                    <a href="module/Events/list" title="">Clear all filters</a>
                                 </div>
                                 <div class="paddy">
-                                    <div class="filter-dd">
-                                        <div class="filter-ttl">
-                                            <h3>Title</h3>
-                                            <a href="/events" title="">Clear</a>
-                                        </div>
-                                        <form>
-                                            <input type="text" name="search" placeholder="Search">
-                                        </form>
-                                    </div>
 
                                     <div class="filter-dd">
                                         <div class="filter-ttl">
-                                            <h3>event Type</h3>
-                                            <a href="/events" title="">Clear</a>
+                                            <h3>event Category</h3>
+                                            <a href="module/Events/list" title="">Clear</a>
                                         </div>
                                         <div class="post-st">
                                             <ul>
-                                                <li><a href="/events/?type=Webinar" title="">Webinar</a></li>
-                                                <li><a href="/events/?type=Workshop" title="">Workshop</a></li>
-                                                <li><a href="/events/?type=Fair" title="">Fair</a></li>
-                                                <li><a href="/events/?type=Competition" title="">Competition</a></li>
-                                                <li><a href="/events/?type=Virtual chat" title="">Virtual chat</a></li>
-                                                <li><a href="/events/?type=Seminar" title="">Seminar</a></li>
-                                                <li><a href="/events/?type=Program" title="">Program</a></li>
+                                                <li><a href="module/Events/list/Fair" title="">Fair</a></li>
+                                                <li><a href="module/Events/list/Seminar" title="">Seminar</a></li>
+                                                <li><a href="module/Events/list/Workshop" title="">Workshop</a></li>
                                             </ul>
                                         </div>
                                     </div>
@@ -45,6 +32,9 @@
                         <div class="col-lg-6">
                             <div class="main-ws-sec">
                               <div class="posts-section">
+                                <div *ngIf="events.length === 0">
+                                  <p>No events available at the moment.</p>
+                              </div>
                                 <div class="post-bar" *ngFor="let event of events; let i = index">
                                   <div class="post_topbar">
                                     <div class="ed-opts">
@@ -81,8 +71,12 @@
                                     </ul>
                                     <p >{{ event.Event_Content }}</p>
                                     <img class="w-48 mr-6 mb-6"  src="{{event.event_Image}}" alt="">
-                                    <!-- Add your image here -->
 
+                                    <ul class="skill-tags">
+                                      <li >
+                                        <a href="#" title="">{{event.Category_event}}</a>
+                                      </li>
+                                    </ul>
                                   </div>
                                 </div>
                               </div>
